@@ -1,0 +1,242 @@
+@import "./short.scss";
+// 공통영역
+// 모바일
+html,body,#__next{
+    margin: 0;
+}
+#__next{
+    position: relative;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: -1;
+    overflow: hidden;
+    background-color: $gray-900;
+      &:before {
+        animation: grain 8s steps(10) infinite;
+        background-image: url("./../public/images/black-paper.webp");
+        content: "";
+        position: absolute;
+        height: 300%;
+        left: -50%;
+        opacity: 0.3;
+        top: -100%;
+        width: 300%;
+      }  
+}
+@keyframes grain {
+0%,
+100% {
+    transform: translate(0, 0);
+}
+10% {
+    transform: translate(-5%, -10%);
+}
+20% {
+    transform: translate(-15%, 5%);
+}
+30% {
+    transform: translate(7%, -25%);
+}
+40% {
+    transform: translate(-5%, 25%);
+}
+50% {
+    transform: translate(-15%, 10%);
+}
+60% {
+    transform: translate(15%, 0%);
+}
+70% {
+    transform: translate(0%, 15%);
+}
+80% {
+    transform: translate(3%, 35%);
+}
+90% {
+    transform: translate(-10%, 10%);
+}
+}  
+.nav{  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    .logo{
+        line-height: 1;
+        text-transform : uppercase;
+        span{
+            color: $brand-blue;
+        }
+    }
+    .navItems{
+        display: flex;
+        flex-direction: row;
+        .navItem:not(:last-child){
+            padding-right: $gap-tablet;
+        }
+        .navItem{
+            display: flex;
+            flex-direction: column;
+            .indicator{
+                display: block;
+                height: 2px;
+                background-color: $brand-blue;
+            }        
+        }        
+    }
+    @media screen and (max-width: $tablet){
+          top: 0 !important;
+    }   
+}
+.nav,.footer{
+    width: 100%;
+    padding-top: $gap-tablet;
+    padding-bottom: $gap-tablet;   
+}
+.pageWraper{
+    display: flex;
+    height: auto; 
+    min-height: calc(100vh - 155px - 41px); 
+    overflow:visible;
+}
+// 데스크탑
+@media screen and (min-width: $desktop){
+    #__next,.siteWrap{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .nav,.footer{
+        position: fixed;
+    }
+    .nav{  
+        z-index: 99; 
+    }
+    .footer{  
+        bottom: 0; 
+    }
+    .nav,.footer{
+        padding-top: $gap-desktop;
+        padding-bottom: $gap-desktop;   
+    }
+    .pageWraper{
+        height: 100%;
+        display: flex;
+        justify-content: center;  
+        align-items: center; 
+    }
+}
+
+// 상세
+.about{      
+    .side{
+        order:1;                   
+        @media screen and (min-width: $desktop){
+            padding-top: 4.8rem; 
+        }
+    }
+    .main{
+        order:0; 
+          @media screen and (min-width: $desktop){
+            order:1;
+          }
+    }
+    @media screen and (min-width: $desktop){
+        .pageGrid{
+            align-items: flex-end;
+        }          
+    }    
+}
+
+.projects{
+    height: 100%;
+    display: flex;
+    align-items: center;   
+    align-self: center; 
+    .card:not(:last-child) {
+        margin-right: $gap-desktop; 
+    }
+    .card:first-child{
+        margin-left: $gap-tablet; 
+    }
+    .card:last-child{
+        margin-right: $gap-tablet; 
+    }
+    .project{
+        
+        .imgWrap{
+            margin-top: 0.4rem;
+            transition: all;
+            position: relative;
+            .img{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              padding: 2.4rem;
+              z-index: 99;  
+              background-color:#000;  
+              color: white;
+                .project{
+                    padding-bottom: 0.8rem;
+                    font-size: 1.7rem;
+                    font-weight: bolder;
+                    line-height: 1;
+                }
+                .text{
+                    font-size: 1.2rem;
+                    line-height: 1.2;
+                    white-space: pre-wrap;
+
+                }              
+            }
+
+            .co{
+                position: absolute;
+                right: 0px;
+                font-size: 1.2rem;
+                z-index: 0;
+            }              
+        }    
+      
+    }   
+    @media screen and (min-width: $desktop){
+        .card:not(:last-child) {
+            margin-right: $gap-xxlg; 
+        }        
+        .card:first-child{
+            margin-left: $gap-desktop; 
+        }
+        .card:last-child{
+            margin-right: $gap-desktop; 
+        }
+    }
+}
+
+.progressBar{
+    position: fixed;
+    .indicator{
+        background-color: $brand-blue;
+        left:$gap-mobile;
+        right:$gap-mobile;       
+        bottom: $gap-desktop;
+        position: fixed;
+        height:2px;
+        @media screen and (min-width: $tablet){
+            left:$gap-tablet;
+            right:$gap-tablet;
+            bottom: $gap-desktop;
+        }      
+        @media screen and (min-width: $desktop){
+            left:$gap-desktop;
+            right:$gap-desktop;
+            bottom: $gap-xxlg;
+        }          
+    }
+}
+

@@ -1,0 +1,1118 @@
+@import "./short.scss";
+@import url('./site.css');
+// @import url(./../font/pretendardvariable.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@100;300;400;500;600;800&display=swap');
+@import url('./../public/font/NHU/stylesheet.css');
+
+:root{
+  font-size: 10px !important;
+}
+
+body{
+  // font-family: 'Noto Sans KR', sans-serif !important;
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  font-size: 1.7rem;
+  font-weight: $font-weight-l;
+}
+
+body,.light-theme{
+  // 폰트
+  .ink{
+    &-active{
+      color: $white;
+    } 
+    &-higher{
+      color: $black;
+    }
+    &-medium{
+      color: $gray-830;
+    }
+    &-primary{
+      color: $gray-700;
+    }
+    &-lower{
+      color: $gray-700;
+    }
+    &-disable{
+      color: $gray-320;
+    }
+  }
+  // 보더
+  .border{
+    border: 1px solid white;
+    &-high{
+      border-color: $gray-800;
+    }
+    &-medium{
+      border-color: $gray-400;
+    }
+    &-primary{
+      border-color: $gray-320;
+    }
+    &-disable{
+      border-color: $gray-200;
+    }
+    &-low{
+      border-color: $gray-100;
+    }
+  }
+  // 표면
+  .surface{
+    &-high{
+      background-color: $gray-700;
+    }
+    &-medium{
+      background-color: $gray-320;
+    }
+    &-primary{
+      background-color: $gray-100;
+    }
+    &-lower{
+      background-color: $gray-50;
+    }    
+    &-disable{
+      background-color: $gray-50;
+    }
+    &-low{
+      background-color: $white;
+    }
+  }
+  // 배경
+  .bg{
+    &-alternate{
+      background-color: $gray-50;
+    }
+    &-base{
+      background-color: $white;
+    }
+  }   
+  // 버튼 
+  .btn{
+    &-primary{
+      background-color: $brand-primary;
+      border: 1px solid darken($brand-primary, 5%);
+      color: $white;
+      &:hover{
+        background-color: darken($brand-primary, 5%);
+        border: 1px solid darken($brand-primary, 15%);
+      }
+      &:active{
+        background-color: darken($brand-primary, 10%);
+        border: 1px solid darken($brand-primary, 15%);
+      }
+      &.loading{
+        background-color: $brand-light;
+        border: 1px solid darken($brand-light, 5%);
+        cursor: not-allowed;
+      }  
+    }
+    &-default{
+      background-color: $white;
+      border: 1px solid $gray-800;
+      color: $gray-830;
+      &:hover{
+        background-color: darken($gray-50, 5%);
+        border: 1px solid darken($gray-800, 15%);
+      }
+      &:active{
+        background-color: darken($gray-50, 10%);
+        border: 1px solid darken($gray-800, 15%);
+      }
+    }
+    &-secondary{
+      background-color: $gray-200;;
+      border: 1px solid $gray-200;;
+      color: $gray-830;
+      &:hover{
+        background-color: darken($gray-200, 5%);
+        border: 1px solid darken($gray-200, 5%);
+      }
+      &:active{
+        background-color: darken($gray-200, 10%);
+        border: 1px solid darken($gray-200, 10%);
+      }
+    }
+    &-flat{
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: $gray-830;
+      &:hover{
+        background-color: darken($gray-50, 5%);
+        border: 1px solid darken($gray-50, 5%);
+      }
+      &:active{
+        background-color: darken($gray-50, 10%);
+        border: 1px solid darken($gray-50, 10%);
+      }
+    }
+    &-ghost{
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: $gray-700;
+      padding: 0;
+      height: auto;
+      &:hover{
+        color: $black;
+      }
+      &:active{
+        color: $black;
+      }
+    }
+    &-disable{
+      background-color: $gray-100;
+      border: 1px solid $gray-200;
+      color: $gray-320;
+      cursor: not-allowed;
+      &:hover{
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
+        color: $gray-320;
+        cursor: not-allowed;
+      }
+      &:active{
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
+        color: $gray-320;
+        cursor: not-allowed;
+      }
+    }    
+  }
+  //그림자
+  .shadow{
+    &-sm{
+      box-shadow: rgba($black, 0.075) 0px 2px 4px 0px;
+    }
+    &-md{
+      box-shadow: rgba($black, 0.15) 0px 8px 16px 0px
+      0 .5rem 1rem rgba($black,.15);
+    }
+    &-lg{
+      box-shadow: rgba($black, 0.176) 0px 16px 48px 0px
+      0 1rem 3rem rgba($black,.175);
+    }
+  }  
+}
+// 테마
+.dark{
+  // 폰트
+  &-ink{
+    &-active{
+      color: $black;
+    } 
+    &-higher{
+      color: $white;
+    }
+    &-medium{
+      color: $gray-300;
+    }
+    &-primary{
+      color: $gray-500;
+    }
+    &-lower{
+      color: $gray-600;
+    }
+    &-disable{
+      color: $gray-800;
+    }
+  }
+  // 보더
+  .border{
+    &-high{
+      border-color: $white;
+    }
+    &-medium{
+      border-color: $gray-700;
+    }
+    &-primary{
+      border-color: $gray-800;
+    }
+    &-disable{
+      border-color: $gray-830;
+    }
+    &-low{
+      border-color: $gray-900;
+    }
+  }
+  // 표면
+  .surface{
+    &-high{
+      background-color: $white;
+    }
+    &-medium{
+      background-color: $gray-800;
+    }
+    &-primary{
+      background-color: $gray-830;
+    }
+    &-lower{
+      background-color: $gray-900;
+    }    
+    &-disable{
+      background-color: $gray-930
+    }
+    &-low{
+      background-color: $black;
+    }
+  }
+  // 배경
+  &-bg{
+    &-alternate{
+      background-color: $gray-930;
+    }
+    &-base{
+      background-color: $gray-900;
+    }
+  }   
+  // 버튼 
+  .btn{
+    &-primary{
+      background-color: $brand-primary;
+      border: 1px solid darken($brand-primary, 5%);
+      color: $white;
+      &:hover{
+        background-color: darken($brand-primary, 5%);
+        border: 1px solid darken($brand-primary, 15%);
+      }
+      &:active{
+        background-color: darken($brand-primary, 10%);
+        border: 1px solid darken($brand-primary, 15%);
+      }
+      &.loading{
+        background-color: $brand-light;
+        border: 1px solid darken($brand-light, 5%);
+        cursor: not-allowed;
+      }  
+    }
+    &-default{
+      background-color: $white;
+      border: 1px solid $gray-800;
+      color: $gray-830;
+      &:hover{
+        background-color: darken($gray-50, 5%);
+        border: 1px solid darken($gray-800, 15%);
+      }
+      &:active{
+        background-color: darken($gray-50, 10%);
+        border: 1px solid darken($gray-800, 15%);
+      }
+    }
+    &-secondary{
+      background-color: $gray-200;;
+      border: 1px solid $gray-200;;
+      color: $gray-830;
+      &:hover{
+        background-color: darken($gray-200, 5%);
+        border: 1px solid darken($gray-200, 5%);
+      }
+      &:active{
+        background-color: darken($gray-200, 10%);
+        border: 1px solid darken($gray-200, 10%);
+      }
+    }
+    &-flat{
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: $gray-830;
+      &:hover{
+        background-color: darken($gray-50, 5%);
+        border: 1px solid darken($gray-50, 5%);
+      }
+      &:active{
+        background-color: darken($gray-50, 10%);
+        border: 1px solid darken($gray-50, 10%);
+      }
+    }
+    &-ghost{
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: $gray-700;
+      padding: 0;
+      height: auto;
+      &:hover{
+        color: $black;
+      }
+      &:active{
+        color: $black;
+      }
+    }
+    &-disable{
+      background-color: $gray-100;
+      border: 1px solid $gray-200;
+      color: $gray-320;
+      cursor: not-allowed;
+      &:hover{
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
+        color: $gray-320;
+        cursor: not-allowed;
+      }
+      &:active{
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
+        color: $gray-320;
+        cursor: not-allowed;
+      }
+    }    
+  }
+  //그림자
+  .shadow{
+    &-sm{
+      box-shadow: rgba($black, 0.075) 0px 2px 4px 0px;
+    }
+    &-md{
+      box-shadow: rgba($black, 0.15) 0px 8px 16px 0px
+      0 .5rem 1rem rgba($black,.15);
+    }
+    &-lg{
+      box-shadow: rgba($black, 0.176) 0px 16px 48px 0px
+      0 1rem 3rem rgba($black,.175);
+    }
+  }  
+}
+
+//공통
+//util
+body.false-spacing{
+  .spacing{
+    background-color: transparent;
+    span{
+      display: none;
+    }
+  }  
+}
+.spacing{
+  background-color: $util-yellow;
+  span{
+    color: $util-blue;
+  }
+}
+//폰트
+.ink{
+  &-white{
+    color: $white;
+  }
+  &-black{
+    color: $black;
+  }
+  &-util{
+    color: $util-blue;
+  }
+  &-info{
+    color: $info;
+  }
+  &-interactive{
+    color: $interactive;
+  }
+  &-critical{
+    color: $critical;
+  }
+  &-success{
+    color: $success;
+  }
+  &-warning{
+    color: $warning;
+  }
+  &-change{
+    color: $change;
+  }
+}
+// 라운드
+.rounded{
+  &-6{
+    border-radius: .6rem;
+  }
+  &-pill{
+      border-radius: 50rem;
+  }
+  &-left-0{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+  }
+  &-right-0{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+  }
+}
+//버튼
+.btn{
+  &.squere{
+      padding: 0;
+      overflow: hidden;    
+  }
+  &-xs{
+    font-size: 1.3rem;
+    height: 2.8rem;
+    padding: 0 0.8rem;
+    &.squere{
+      font-size: 1.5rem;
+      height: 2.8rem;
+      width: 2.8rem;
+    }
+  }
+  &-sm{
+    font-size: 1.4rem;
+    height: 3.2rem;
+    padding: 0 1.2rem;
+    &.squere{
+      font-size: 1.6rem;
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+  }
+  &-md{
+    font-size: 1.5rem;
+    height: 4.0rem;
+    padding: 0 1.6rem; 
+    &.squere{
+      font-size: 1.7rem;
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  &-lg{
+    font-size: 1.7rem;
+    height: 4.8rem;
+    padding: 0 2rem;
+    &.squere{
+      font-size: 1.9rem;
+      height: 4.8rem;
+      width: 4.8rem;
+    }
+  }
+  &-xlg{
+    font-size: 1.8rem;
+    height: 5.6rem;
+    padding: 0 2.4rem;
+    &.squere{
+      font-size: 2rem;
+      height: 5.6rem;
+      width: 5.6rem;
+    }
+  }
+  @mixin semantic ($value){
+      background-color:transparent;
+      border: 1px solid $value;
+      color: $value;
+      &:hover{
+        background-color: darken($white, 5%);
+        border: 1px solid darken($value, 15%);
+      }
+      &:active{
+        background-color: darken($white, 10%);
+        border: 1px solid darken($value, 15%);
+      }
+  }
+  &-critical{
+    @include semantic($critical)
+  }
+  &-info{
+    @include semantic($info)
+  }
+  &-success{
+    @include semantic($success)
+  }
+  &-warning{
+    @include semantic($warning)
+  }
+}
+//리스트
+.list{
+  &-none{
+    list-style:none;
+  }
+}
+//커서
+.cursor{
+  &-pointer{
+  cursor:pointer}
+}
+
+//이미지
+.object-fit{
+  &-fill{
+    object-fit: fill;
+  }
+  &-contain{
+    object-fit: contain;
+  }
+  &-cover{
+    object-fit: cover;
+  }
+  &-none{
+    object-fit: none;
+  }
+  &-scale-down{
+    object-fit: scale-down;
+  }
+}
+//폰트
+.t{
+  &-weight-thin{
+    font-weight: $font-weight-t !important;
+  }
+  &-weight-light{
+    font-weight: $font-weight-l !important;
+  }
+  &-weight-regular{
+    font-weight: $font-weight-r !important;
+  }
+  &-weight-medium{
+    font-weight: $font-weight-m !important;
+  }
+  &-weight-semi{
+    font-weight: $font-weight-sb !important;
+  }
+  &-weight-bold{
+    font-weight: $font-weight-b !important;
+  }
+  &-height-1{
+    line-height: $line-height-1;
+  }
+  &-height-12{
+    line-height: $line-height-12;
+  }
+  &-height-13{
+    line-height: $line-height-13;
+  }
+  &-height-14{
+    line-height: $line-height-14;
+  }
+  &-height-15{
+    line-height: $line-height-15;
+  }
+  &-height-2{
+    line-height: $line-height-2;
+  }
+
+  &-display-lg{
+    font-size: 9.6rem;
+    font-weight: $font-weight-b;
+    line-height: $line-height-12;
+    letter-spacing: $letter-spacing-l;
+  }
+  &-display-md{
+    font-size: 6.0rem;
+    font-weight: $font-weight-l;
+    line-height: $line-height-12;
+  }
+  &-display-sm{
+    font-size: 4.8rem;
+    font-weight: $font-weight-r;
+    line-height: $line-height-13;
+    letter-spacing: $letter-spacing-m;
+  }
+  &-display-xs{
+    font-size: 3.6rem;
+    font-weight: $font-weight-r;
+    line-height: $line-height-12;
+  }
+  &-chapter-subHead{
+    font-size: 3.2rem;
+    font-weight: $font-weight-r;
+    line-height: $line-height-12;   
+  }
+  &-part-subHead{
+    font-size: 2.8rem;
+    font-weight: $font-weight-l;
+    line-height: $line-height-12;   
+  }
+  &-section-subHead{
+    font-size: 2.4rem;
+    font-weight: $font-weight-r;
+    line-height: $line-height-12;   
+  }
+  &-article-subHead{
+    font-size: 2.0rem;
+    font-weight: 400;
+    font-weight: $font-weight-l;
+    line-height: $line-height-13;    
+    letter-spacing: $letter-spacing-s;
+  }
+  &-body-lg-strong{
+    font-size: 1.7rem;
+    font-weight: $font-weight-b;
+    line-height: $line-height-14;
+    letter-spacing: $letter-spacing-s;
+  }
+  &-body-lg{
+    font-size: 1.7rem;
+    font-weight: $font-weight-r;
+    line-height: $line-height-14;
+    letter-spacing: $letter-spacing-s;
+  }
+  &-body-strong{
+    font-size: 1.6rem;
+    font-weight: $font-weight-m;
+    line-height: $line-height-14;
+  }  
+  &-body{
+    font-size: 1.6rem;
+    font-weight: $font-weight-l;
+    line-height: $line-height-14;
+    letter-spacing: $letter-spacing-s
+  }
+  &-body-sm-strong{
+    font-size: 1.4rem;
+    font-weight: $font-weight-m;
+    line-height: $line-height-13;
+  }
+  &-body-sm{
+    font-size: 1.4rem;
+    font-weight: $font-weight-l;
+    line-height: $line-height-15;
+  }
+  &-metadata{
+    font-size: 1.3rem;
+    font-weight: $font-weight-l;
+    line-height: $line-height-15;
+  }
+  &-metadata-sm{
+    font-size: 1.2rem;
+    font-weight: $font-weight-l;
+    line-height: $line-height-15;
+  }
+  &-metadata-xs{
+    font-size: 1rem;
+    font-weight: $font-weight-r;
+    line-height: $line-height-15;
+  }
+  &-center{
+    text-align: center;
+  } 
+  &-left{
+      text-align: left;
+  } 
+  &-right{
+      text-align: right;
+  }  
+  &-justify{
+      text-align: justify;
+  }
+  &-decoration-none{
+      text-decoration: none;
+  } 
+  &-decoration-underline{
+      text-decoration: underline;
+  }
+  &-overflow-ellipsis {
+      text-overflow: ellipsis;
+      overflow: hidden; 
+      display: inline-block;
+      white-space: nowrap;
+  }   
+}
+//레이아웃
+.d{
+  &-inline-block{
+      display: inline-block;
+  }
+  &-block{
+      display: block !important;
+  }  
+  &-flex{
+      display: flex;
+  }
+  &-grid{
+      display: grid;
+  }  
+  &-none{
+      display: none;
+  }  
+}
+.align{
+  &-items-center {
+      align-items: center!important;
+  }
+  &-items-start {
+    align-items: start!important;
+}
+  &-items-end {
+      align-items: flex-end!important;
+  }
+  &-content-between{
+    align-content: space-between;
+  }  
+}
+.flex{
+  &-row {
+      flex-direction:row;
+  }
+  &-column {
+      flex-direction:column;
+  }
+  &-nowrap {
+      flex-wrap: nowrap;
+  }   
+}
+.justify{
+  &-content-center{
+      justify-content: center;
+  }
+  &-content-start{
+    justify-content: flex-start;
+  }
+  &-content-between{
+    justify-content: space-between;
+  }
+  &-content-end{
+    justify-content: flex-end;
+  }
+}
+.overflow{
+  &-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    display: inline-block;
+    white-space: nowrap;
+  }
+  &-hidden {
+    overflow: hidden; 
+  }
+}
+@mixin positionStyle() {
+  &-relative{
+      position: relative !important;
+  }
+  &-absolute{
+      position: absolute !important;
+  }
+  &-sticky{
+      position: sticky !important;
+  }
+}
+.position{
+  @include positionStyle()
+}
+//크기
+.h{
+  &-100{
+    height: 100%;
+  }
+  &v-100{
+    height: 100vh;
+  }
+}   
+.w{
+  &-100{
+    width: 100%;
+  }
+  &v-100{
+    width: 100vh;
+  }
+} 
+// 간격
+@mixin marginStyle($value) {
+  margin: $value !important;
+  &-h{
+    height: $value !important;
+  }
+  &-w{
+    width: $value !important;
+  }
+  &-t{
+      margin-top: $value !important;
+  }
+  &-r{
+      margin-right: $value !important;
+  }
+  &-b{
+      margin-bottom: $value !important;
+  }
+  &-l{
+      margin-left: $value !important;
+  }
+  &-x{
+      margin-left: $value !important;
+      margin-right: $value !important;
+  }
+} 
+@mixin marginHandle() { 
+  &0{
+      @include marginStyle(0rem);
+  }  
+  &4{
+      @include marginStyle(.4rem);
+  } 
+  &8{
+      @include marginStyle(.8rem);
+  } 
+  &16{
+      @include marginStyle(1.6rem);
+  }  
+  &24{
+      @include marginStyle(2.4rem);
+  }  
+  &32{
+      @include marginStyle(3.2rem);
+  }  
+  &48{
+      @include marginStyle(4.8rem);
+  } 
+  &64{
+      @include marginStyle(6.4rem);
+  }  
+  &96{
+      @include marginStyle(9.6rem);
+  }  
+}
+.m{
+  @include marginHandle()
+}
+@mixin paddingStyle($value) {
+  padding: $value !important;
+  &-h{
+    height: $value !important;
+  }
+  &-w{
+    width: $value !important;
+  }
+  &-t{
+      padding-top: $value !important;
+  }
+  &-r{
+      padding-right: $value !important;
+  }
+  &-b{
+      padding-bottom: $value !important;
+  }
+  &-l{
+      padding-left: $value !important;
+  }
+  &-x{
+      padding-left: $value !important;
+      padding-right: $value !important;
+  }
+} 
+@mixin paddingHandle() { 
+  &0{
+      @include paddingStyle(0rem);
+  }  
+  &4{
+      @include paddingStyle(.4rem);
+  } 
+  &8{
+      @include paddingStyle(.8rem);
+  } 
+  &16{
+      @include paddingStyle(1.6rem);
+  }  
+  &24{
+      @include paddingStyle(2.4rem);
+  }  
+  &32{
+      @include paddingStyle(3.2rem);
+  }  
+  &48{
+      @include paddingStyle(4.8rem);
+  } 
+  &64{
+      @include paddingStyle(6.4rem);
+  }  
+  &96{
+      @include paddingStyle(9.6rem);
+  }  
+}
+.p{
+  @include paddingHandle()
+}
+//그리드
+@mixin columnStart($value) {
+  grid-column-start: $value;
+} 
+@mixin columnStartHandle() { 
+  &1{
+      @include columnStart(1);
+  }  
+  &2{
+      @include columnStart(2);
+  } 
+  &3{
+      @include columnStart(3);
+  } 
+  &4{
+      @include columnStart(4);
+  }  
+  &5{
+      @include columnStart(5);
+  }  
+  &6{
+      @include columnStart(6);
+  }  
+  &7{
+      @include columnStart(7);
+  } 
+  &8{
+      @include columnStart(8);
+  }  
+  &9{
+      @include columnStart(9);
+  }  
+  &10{
+    @include columnStart(10);
+  } 
+  &11{
+    @include columnStart(11);
+  } 
+  &12{
+    @include columnStart(12);
+  } 
+}
+.cs{
+  @include columnStartHandle()
+}
+@mixin columnEnd($value) {
+  grid-column-end: $value;
+} 
+@mixin columnEndHandle() { 
+  &-1{
+    @include columnEnd(-1);
+  }  
+  &1{
+      @include columnEnd(1);
+  }  
+  &2{
+      @include columnEnd(2);
+  } 
+  &3{
+      @include columnEnd(3);
+  } 
+  &4{
+      @include columnEnd(4);
+  }  
+  &5{
+      @include columnEnd(5);
+  }  
+  &6{
+      @include columnEnd(6);
+  }  
+  &7{
+      @include columnEnd(7);
+  } 
+  &8{
+      @include columnEnd(8);
+  }  
+  &9{
+      @include columnEnd(9);
+  }  
+  &10{
+    @include columnEnd(10);
+  } 
+  &11{
+    @include columnEnd(11);
+  } 
+  &12{
+    @include columnEnd(12);
+  } 
+  &13{
+    @include columnEnd(13);
+  } 
+}
+.ce{
+  @include columnEndHandle()
+}
+@mixin gridColumnSpan($value) {
+  grid-column: span $value;
+} 
+@mixin gridColumnSpanHandle() { 
+  &1{
+      @include gridColumnSpan(1);
+  }  
+  &2{
+      @include gridColumnSpan(2);
+  } 
+  &3{
+      @include gridColumnSpan(3);
+  } 
+  &4{
+      @include gridColumnSpan(4);
+  }  
+  &5{
+      @include gridColumnSpan(5);
+  }  
+  &6{
+      @include gridColumnSpan(6);
+  }  
+  &7{
+      @include gridColumnSpan(7);
+  } 
+  &8{
+      @include gridColumnSpan(8);
+  }  
+  &9{
+      @include gridColumnSpan(9);
+  }  
+  &10{
+    @include gridColumnSpan(10);
+  } 
+  &11{
+    @include gridColumnSpan(11);
+  } 
+  &12{
+    @include gridColumnSpan(12);
+  } 
+}
+.css{
+  @include gridColumnSpanHandle()
+}
+
+.pageMax {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.pagePading {
+  padding-left: $gap-mobile;
+  padding-right: $gap-mobile;
+}
+.pageGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: $gap-mobile;
+  grid-row-gap:$gap-mobile;
+}
+// 패드
+@media screen and (min-width: $tablet) {
+  .pageMax {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .pagePading {
+    padding-left: $gap-tablet;
+    padding-right: $gap-tablet;
+  }
+  .pageGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: $gap-tablet;
+    grid-row-gap:$gap-tablet;
+  }
+}
+// 데스크탑
+@media screen and (min-width: $desktop) {
+  .cs-lg{
+    @include columnStartHandle()
+  }
+  .ce-lg{
+    @include columnEndHandle()
+  }
+  .pageMax {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .pagePading {
+    padding-left: $gap-desktop;
+    padding-right: $gap-desktop;
+  }
+  .pageGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: $gap-tablet;
+    grid-row-gap:$gap-tablet;
+  }
+  .gap-lg{
+    grid-row-gap:$gap-tablet;
+  }
+}
